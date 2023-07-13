@@ -27,10 +27,10 @@ public class UserController {
         this.encoder = encoder;
     }
     @PostMapping("/users")
-    public String createUser(@RequestBody UserDto userDto) {
-        User newUser = new User();
-        newUser.setUsername(userDto.username);
-        newUser.setPassword(encoder.encode(userDto.password));
+    public String createUser(@RequestBody UserDto userDto) { //createUser is een endpoint
+        User newUser = new User();                           //er wordt een nieuw object aangemaakt
+        newUser.setUsername(userDto.username);               //username wordt gecopieerd
+        newUser.setPassword(encoder.encode(userDto.password)); //wachtwoord wordt door de encoder gehaald want staat in constructor
 
         List<Role> userRoles = new ArrayList<>();
         for (String rolename : userDto.roles) {

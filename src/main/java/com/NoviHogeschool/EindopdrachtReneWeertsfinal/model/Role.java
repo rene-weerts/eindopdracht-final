@@ -25,8 +25,20 @@ public class Role {
     private Collection<User> users;
 
     public String getRolename() {
-        return null;
+        return roleName;
     }
     //heeft een many to many relatie naar het lijstje van users
 
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
+    public Collection<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Collection<User> users) {
+        this.users = users;
+    }
 }

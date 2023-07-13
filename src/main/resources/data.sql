@@ -1,0 +1,1 @@
+insert into roles(role_name) values ('ROLE_USER'), ('ROLE_ADMIN'),('ROLE_OWNER'),('ROLE_CUSTOMER'),('ROLE_PATIENT');
